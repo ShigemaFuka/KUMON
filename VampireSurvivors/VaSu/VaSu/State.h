@@ -1,31 +1,26 @@
-#pragma once
+ï»¿#pragma once
 #include <memory>
 
 /// <summary>
-/// ƒXƒe[ƒgƒ}ƒVƒ“
-/// NOTE: ”Ä—p“I‚ÈƒfƒUƒCƒ“ƒpƒ^[ƒ“
+/// ã‚¹ãƒ†ãƒ¼ãƒˆãƒã‚·ãƒ³
+/// NOTE: æ±ç”¨çš„ãªãƒ‡ã‚¶ã‚¤ãƒ³ãƒ‘ã‚¿ãƒ¼ãƒ³
 /// </summary>
 class StateControl;
-
-// ’ŠÛƒNƒ‰ƒX
 class State
 {
 protected:
-	std::weak_ptr<StateControl> _ctrl; //zŠÂQÆ‚É‚È‚é‚Ì‚Åweak‚Å‚Â
+	std::weak_ptr<StateControl> _ctrl; //å¾ªç’°å‚ç…§ã«ãªã‚‹ã®ã§weakã§æŒã¤
 
 	State() {}
 public:
-	// explicitFˆÃ–Ù‚ÌŒ^•ÏŠ·‚ğ–h~
-	explicit State(std::weak_ptr<StateControl> c) : _ctrl(c) { }
-	// ‰¼‘zƒfƒXƒgƒ‰ƒNƒ^
+	explicit State(std::weak_ptr<StateControl> c): _ctrl(c){ }
 	virtual ~State() {};
-	// ƒˆ‰¼‘zŠÖ”
+
 	virtual void Enter() = 0;
 	virtual void Loop() = 0;
 	virtual void Exit() = 0;
 };
 
-//std::shared_ptrFŠ—LŒ ‚Ì‹¤—LE©“®ƒƒ‚ƒŠŠÇ—
 class StateControl : public std::enable_shared_from_this<StateControl>
 {
 protected:
@@ -38,6 +33,6 @@ public:
 	virtual ~StateControl() {};
 
 	std::shared_ptr<StateControl> GetPtr() { return shared_from_this(); }
-	virtual void NextState(int state) = 0;
+	virtual void NextState(int state)=0;
 	void Loop();
 };

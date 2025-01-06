@@ -1,11 +1,11 @@
-#pragma once
+ï»¿#pragma once
 #include <memory>
 
 
 /// <summary>
-/// ƒVƒ“ƒOƒ‹ƒgƒ“
-/// NOTE: ”Ä—p“I‚ÈƒfƒUƒCƒ“ƒpƒ^[ƒ“
-/// ƒR[ƒh‚ÌÚ×‚ÍˆÈ‰º‚ğQÆ‚Ì‚±‚Æ
+/// ã‚·ãƒ³ã‚°ãƒ«ãƒˆãƒ³
+/// NOTE: æ±ç”¨çš„ãªãƒ‡ã‚¶ã‚¤ãƒ³ãƒ‘ã‚¿ãƒ¼ãƒ³
+/// ã‚³ãƒ¼ãƒ‰ã®è©³ç´°ã¯ä»¥ä¸‹ã‚’å‚ç…§ã®ã“ã¨
 /// https://cflat-inc.hatenablog.com/entry/2014/03/04/214608
 /// </summary>
 template <class T>

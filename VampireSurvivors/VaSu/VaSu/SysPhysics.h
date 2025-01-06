@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include <array>
 #include <vector>
@@ -7,14 +7,14 @@
 #include "Singleton.h"
 
 /// <summary>
-/// •¨—ƒVƒXƒeƒ€
-/// NOTE: Unity/C#‚É‚¨‚¯‚éPhysics System‚Æ‚Ù‚Ú“¯‚¶‚Å‚·B‚½‚¾‚µ‚â‚Á‚Ä‚¢‚é‚±‚Æ‚ÍŒÀ‚è‚È‚­­‚È‚¢‚Å‚·B
-///       ƒVƒXƒeƒ€‘¤‚Åˆ—‚ğ‚·‚é‚±‚Æ‚Å‚ ‚Æ‚©‚çÅ“K‰»‚ğ‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
-///       ƒVƒ“ƒOƒ‹ƒgƒ“
+/// ç‰©ç†ã‚·ã‚¹ãƒ†ãƒ 
+/// NOTE: Unity/C#ã«ãŠã‘ã‚‹Physics Systemã¨ã»ã¼åŒã˜ã§ã™ã€‚ãŸã ã—ã‚„ã£ã¦ã„ã‚‹ã“ã¨ã¯é™ã‚Šãªãå°‘ãªã„ã§ã™ã€‚
+///       ã‚·ã‚¹ãƒ†ãƒ å´ã§å‡¦ç†ã‚’ã™ã‚‹ã“ã¨ã§ã‚ã¨ã‹ã‚‰æœ€é©åŒ–ã‚’ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
+///       ã‚·ãƒ³ã‚°ãƒ«ãƒˆãƒ³
 /// </summary>
 class SysPhysics : public Singleton<SysPhysics>
 {
-	/*friend class Singleton<SysPhysics>;
+	friend class Singleton<SysPhysics>;
 
 	std::thread _worker;
 	std::array<std::vector<std::shared_ptr<Collider2D>>, Collider2D::MAX_COLLIDER_TAG> _colliders;
@@ -33,5 +33,5 @@ public:
 	static void Remove(std::shared_ptr<Collider2D> collision, Collider2D::COLLIDER_TAG tag);
 
 	static void Create();
-	static void Release();*/
+	static void Release();
 };

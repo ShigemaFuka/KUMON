@@ -1,12 +1,12 @@
-#pragma once
+﻿#pragma once
 
 /// <summary>
-/// �x�N�g���N���X(2D)
-/// NOTE: Unity/C#�ɂ�����Vector2�Ƃقړ����ł��BX,Y�ł�W,H�ł��g����悤�ɂ��Ă��܂��B
+/// ベクトルクラス(2D)
+/// NOTE: Unity/C#におけるVector2とほぼ同じです。X,YでもW,Hでも使えるようにしています。
 /// </summary>
 struct Vector2
 {
-	//�������p�̂������āAX,Y��W,H�̃������z�u�𓯂��ɂ���
+	//無名共用体をつかって、X,YとW,Hのメモリ配置を同じにする
 	union {
 		float X;
 		float W;
@@ -54,8 +54,8 @@ struct Vector2
 };
 
 /// <summary>
-/// �x�N�g���N���X(3D)
-/// NOTE: Unity/C#�ɂ�����Vector3�Ƃقړ����ł��B�g���ĂȂ��̂ōŏ������ł��B
+/// ベクトルクラス(3D)
+/// NOTE: Unity/C#におけるVector3とほぼ同じです。使ってないので最小実装です。
 /// </summary>
 struct Vector3
 {

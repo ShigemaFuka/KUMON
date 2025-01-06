@@ -108,6 +108,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\vantan\MyC++Games\Kumon\VampireSurvivors\DxLib_VC\DxLib</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -132,14 +133,43 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="Collider2D.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="GameMath.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainGameSequence.cpp" />
+    <ClCompile Include="MainGameState.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="State.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="SysPhysics.cpp" />
+    <ClCompile Include="TaskBase.cpp" />
+    <ClCompile Include="TaskManager.cpp" />
+    <ClCompile Include="ThreadPool.cpp" />
+    <ClCompile Include="TitleState.cpp" />
+    <ClCompile Include="Transform.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\DxLib\DxLib.h" />
+    <ClInclude Include="Bullet.h" />
+    <ClInclude Include="Collider2D.h" />
+    <ClInclude Include="Enemy.h" />
     <ClInclude Include="GameMath.h" />
+    <ClInclude Include="GameType.h" />
+    <ClInclude Include="IGameObject.h" />
+    <ClInclude Include="MainGameSequence.h" />
+    <ClInclude Include="MainGameState.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="Singleton.h" />
     <ClInclude Include="State.h" />
+    <ClInclude Include="stdafx.h" />
     <ClInclude Include="SysPhysics.h" />
+    <ClInclude Include="TaskBase.h" />
+    <ClInclude Include="TaskManager.h" />
+    <ClInclude Include="ThreadPool.h" />
+    <ClInclude Include="TitleState.h" />
+    <ClInclude Include="Transform.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
